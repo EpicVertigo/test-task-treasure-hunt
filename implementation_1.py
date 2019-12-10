@@ -83,8 +83,11 @@ class TreasureHuntSolver:
         self.traveled_cells = set()
 
     def print_result(self):
-        print(f'Treasure hunt solved!\n'
-              f'Output path is: {", ".join([str(x) for x in self.moves])}')
+        if self.solved:
+            print(f'Treasure hunt solved!\n'
+                  f'Output path is: {", ".join([str(x) for x in self.moves])}')
+        else:
+            print('Current board is not solved yet')
 
     def reset_solver(self):
         """Resets current instance attributes for reusability"""

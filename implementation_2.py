@@ -5,7 +5,7 @@ def board_solver(board: list):
     moves = []
     solved = False
 
-    def move_to_next_cell(x: int = 1, y: int = 1):
+    def move_to_next_cell(x: int = 1, y: int = 1) -> list:
         nonlocal solved
         if solved:
             solved = False
